@@ -1,0 +1,30 @@
+<section id="bestSeller" class="mt-16">
+  <div class="md:w-[1200px] flex flex-col md:mx-auto mx-5">
+    <div class="flex justify-between items-center">
+      <h2 class="text-2xl font-bold text-[#33150e]">Best Selling</h2>
+      <p
+        class="text-[#33150e] hover:underline font-semibold text-sm cursor-pointer"
+      >
+        See more
+      </p>
+    </div>
+    <div
+      class="flex justify-between mt-5 space-x-5 overflow-x-auto scrollbar-hide"
+    >
+      <!-- First Item -->
+      <div
+        *ngFor="let item of bestsellerData"
+        class="min-w-[320px] flex flex-col items-center cursor-pointer transition-transform hover:-translate-y-1"
+      >
+        <img
+          class="w-80 h-64 rounded-lg"
+          [src]="item.imgPath"
+          alt="Langga Cafe Best Seller Food 1"
+        />
+        <h3 class="text-md font-bold text-[#33150e] mt-5">
+          {{ item.name }}
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>

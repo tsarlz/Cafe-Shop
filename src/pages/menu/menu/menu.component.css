@@ -1,0 +1,24 @@
+.menuImg-wrapper {
+  position: relative; /* Allows positioning of pseudo-elements */
+  display: inline-block; /* Keeps the size tight to the image */
+}
+
+.menuImg-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: #84cc16; /* Overlay color */
+  z-index: 1; /* Places the overlay above the background but below the image */
+  /* Makes the overlay semi-transparent */
+}
+
+.menuImg {
+  position: relative;
+  z-index: 2; /* Places the image above the overlay */
+  width: 12rem; /* Example size */
+  height: 12rem; /* Example size */
+}

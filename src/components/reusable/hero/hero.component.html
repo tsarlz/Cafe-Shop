@@ -1,0 +1,23 @@
+<section id="hero" class="bg-[#F9E2BA] md:block hidden">
+  <div
+    class="flex justify-between items-center max-w-[1000px] m-auto min-h-[95vh]"
+  >
+    <div class="space-y-8 mt-16">
+      <div class="mt-5">
+        <h1 class="text-7xl font-bold text-[#33150e]">
+          {{ heroText }}
+        </h1>
+        <h3 class="text-xl font-semibold text-[#33150e] mt-6">
+          {{ heroSubText }}
+        </h3>
+      </div>
+      <button
+        routerLink="/menu"
+        class="hover:bg-[#8a5939] transition-transform hover:text-[#FFF7E6] px-4 py-2 rounded-full font-semibold border-2 border-amber-900"
+      >
+        Get Satisfied
+      </button>
+    </div>
+    <img class="w-80" [src]="heroImg" alt="Hero Section Image" />
+  </div>
+</section>

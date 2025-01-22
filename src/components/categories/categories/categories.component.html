@@ -1,0 +1,47 @@
+<section id="catergories" class="my-16">
+  <div class="w-[1200px] mx-auto">
+    <div class="grid gap-10 grid-cols-2 place-items-center items-center">
+      <!-- Item 1  -->
+      <div
+        *ngFor="let item of categoriesData"
+        class="flex flex-col justify-center items-center w-[36rem]"
+      >
+        <img class="w-full h-[25rem]" [src]="item.imgPath" [alt]="item.title" />
+        <div
+          class="w-full bg-[#33150e] text-[#FFF7E6] flex flex-col justify-center items-center p-10 rounded-xl"
+          [style.background-color]="item.bgColor"
+          [style.color]="item.textColor"
+        >
+          <h3 class="text-xl font-bold">{{ item.title }}</h3>
+          <p class="text-center my-5">
+            {{ item.subTitle }}
+          </p>
+
+          <app-category-button
+            [borderColor]="item.borderColor"
+          ></app-category-button>
+        </div>
+      </div>
+
+      <div
+        class="flex justify-center items-center w-[1200px] col-span-2 h-[20rem]"
+      >
+        <img class="w-1/2 h-full" [src]="customers" alt="Loose Tea" />
+        <div
+          class="w-1/2 h-full bg-[#f9eedb] text-[#33150e] flex flex-col justify-center items-center p-10 rounded-r-xl"
+        >
+          <h3 class="text-xl font-bold">Satisfied Customers</h3>
+          <p class="text-center my-5">
+            Discover serenity in every steep, crafted just for you.
+          </p>
+          <button
+            routerLink="/menu"
+            class="hover:bg-[#8a5939] transition-transform hover:text-[#FFF7E6] px-4 py-2 rounded-full font-semibold border-2 border-[#33150e]"
+          >
+            See more
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
