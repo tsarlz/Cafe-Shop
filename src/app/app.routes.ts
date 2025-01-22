@@ -7,15 +7,15 @@ import { FeedbackComponent } from '../pages/feedback/feedback/feedback.component
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: '',
     pathMatch: 'full',
   },
   {
-    path: '**',
-    redirectTo: 'home',
+    path: '*',
+    redirectTo: '',
   },
   {
-    path: 'home',
+    path: '',
     component: HomeComponent,
   },
   {
