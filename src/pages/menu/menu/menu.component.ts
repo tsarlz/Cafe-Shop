@@ -22,7 +22,6 @@ export class MenuComponent implements OnInit {
   allFoods: any[] = [];
   filteredItems: any[] = [];
   variety: string = '';
-  category: string = '';
 
   searchInput = '';
 
@@ -37,6 +36,10 @@ export class MenuComponent implements OnInit {
           item.variety.toLocaleLowerCase().trim().includes(this.searchInput)
       );
     }
+  }
+
+  hasCategory(category: string) {
+    return this.filteredItems.some((item) => item.category === category);
   }
 
   ngOnInit(): void {
@@ -61,8 +64,13 @@ export class MenuComponent implements OnInit {
     this.allDrinks = drinks?.categories.flatMap((item) => item.types) || [];
     this.allFoods = foods?.categories.flatMap((item) => item.types) || [];
 
-    return (this.filteredItems = [...this.allDrinks, ...this.allFoods]);
+    const menuArr = (this.filteredItems = [
+      ...this.allDrinks,
+      ...this.allFoods,
+    ]);
+
     this.variety = '';
+    return menuArr;
   }
 
   filterMenu(category: string) {

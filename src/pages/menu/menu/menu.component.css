@@ -19,6 +19,5 @@
 .menuImg {
   position: relative;
   z-index: 2; /* Places the image above the overlay */
-  width: 12rem; /* Example size */
-  height: 12rem; /* Example size */
+  /* Example size */
 }

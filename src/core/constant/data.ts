@@ -146,16 +146,6 @@ export const menuList = [
         variety: 'Milktea',
         types: [
           {
-            name: 'Vietnamese Coffee',
-            price: 100,
-            description:
-              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, blanditiis.',
-            selections: ['cold', 'hot'],
-            category: 'Drinks',
-            imgPath: 'coffe.png',
-            variety: 'Milktea',
-          },
-          {
             name: 'Taro (Purple Yum)',
             price: 59,
             description:

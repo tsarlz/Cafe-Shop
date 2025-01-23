@@ -9,21 +9,29 @@
   font-family: "Inter", serif;
 }
 
-html,
+/* html,
 body {
   height: 100%;
-}
+} */
 /* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
 
-html,
+/* html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
+} */
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* for Internet Explorer */
+  scrollbar-width: none; /* for Firefox */
 }

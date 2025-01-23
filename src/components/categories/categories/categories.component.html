@@ -1,19 +1,27 @@
-<section id="catergories" class="my-16">
-  <div class="w-[1200px] mx-auto">
-    <div class="grid gap-10 grid-cols-2 place-items-center items-center">
+<section id="catergories" class="my-16 sm:mx-0 mx-16">
+  <div class="max-w-[75rem] mx-auto">
+    <div
+      class="grid gap-10 md:grid-cols-2 grid-cols-1 place-items-center items-center"
+    >
       <!-- Item 1  -->
       <div
         *ngFor="let item of categoriesData"
-        class="flex flex-col justify-center items-center w-[36rem]"
+        class="flex flex-col justify-center items-center w-auto sm:w-[36rem]"
       >
-        <img class="w-full h-[25rem]" [src]="item.imgPath" [alt]="item.title" />
+        <img
+          class="w-full h-[18rem] md:h-[25rem]"
+          [src]="item.imgPath"
+          [alt]="item.title"
+        />
         <div
-          class="w-full bg-[#33150e] text-[#FFF7E6] flex flex-col justify-center items-center p-10 rounded-xl"
+          class="w-full h-full bg-[#33150e] text-[#FFF7E6] flex flex-col justify-center items-center p-7 sm:p-10 rounded-xl"
           [style.background-color]="item.bgColor"
           [style.color]="item.textColor"
         >
-          <h3 class="text-xl font-bold">{{ item.title }}</h3>
-          <p class="text-center my-5">
+          <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-0">
+            {{ item.title }}
+          </h3>
+          <p class="text-sm sm:text-md text-center my-3 md:my-5">
             {{ item.subTitle }}
           </p>
 
@@ -24,11 +32,15 @@
       </div>
 
       <div
-        class="flex justify-center items-center w-[1200px] col-span-2 h-[20rem]"
+        class="flex md:flex-row flex-col justify-center items-center w-auto sm:w-[36rem] md:w-[75rem] col-span-1 md:col-span-2 md:h-[20rem]"
       >
-        <img class="w-1/2 h-full" [src]="customers" alt="Loose Tea" />
+        <img
+          class="md:w-1/2 w-full md:h-full"
+          [src]="customers"
+          alt="Loose Tea"
+        />
         <div
-          class="w-1/2 h-full bg-[#f9eedb] text-[#33150e] flex flex-col justify-center items-center p-10 rounded-r-xl"
+          class="md:w-1/2 w-full h-full bg-[#f9eedb] text-[#33150e] flex flex-col justify-center items-center p-10 rounded-r-xl"
         >
           <h3 class="text-xl font-bold">Satisfied Customers</h3>
           <p class="text-center my-5">
