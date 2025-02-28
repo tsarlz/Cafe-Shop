@@ -1,20 +1,20 @@
-<section id="catergories" class="my-16 sm:mx-0 mx-16">
-  <div class="max-w-[75rem] mx-auto">
+<section id="catergories" class="md:my-16">
+  <div class="max-w-[75rem] lg:mx-auto md:mx-10">
     <div
-      class="grid gap-10 md:grid-cols-2 grid-cols-1 place-items-center items-center"
+      class="grid md:gap-10 gap-8 md:grid-cols-2 grid-cols-1 place-items-center items-stretch"
     >
       <!-- Item 1  -->
       <div
         *ngFor="let item of categoriesData"
-        class="flex flex-col justify-center items-center w-auto sm:w-[36rem]"
+        class="flex flex-col justify-center items-center w-auto lg:w-[36rem]"
       >
         <img
-          class="w-full h-[18rem] md:h-[25rem]"
+          class="w-full md:h-[18rem] lg:h-[25rem]"
           [src]="item.imgPath"
           [alt]="item.title"
         />
         <div
-          class="w-full h-full bg-[#33150e] text-[#FFF7E6] flex flex-col justify-center items-center p-7 sm:p-10 rounded-xl"
+          class="w-full md:h-[15rem] bg-[#33150e] text-[#FFF7E6] text-center flex flex-col justify-center items-center p-7 sm:p-10 rounded-xl"
           [style.background-color]="item.bgColor"
           [style.color]="item.textColor"
         >
@@ -32,7 +32,7 @@
       </div>
 
       <div
-        class="flex md:flex-row flex-col justify-center items-center w-auto sm:w-[36rem] md:w-[75rem] col-span-1 md:col-span-2 md:h-[20rem]"
+        class="flex md:flex-row flex-col justify-center items-center w-auto lg:w-[75rem] col-span-1 md:col-span-2 md:h-[15rem] lg:h-[20rem]"
       >
         <img
           class="md:w-1/2 w-full md:h-full"

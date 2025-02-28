@@ -2,14 +2,17 @@ export const bestseller = [
   {
     name: 'Latte Frappe',
     imgPath: 'bestseller1.jpg',
+    price: 100,
   },
   {
     name: 'Chicken Lollipop',
     imgPath: 'bestseller2.jpg',
+    price: 120,
   },
   {
     name: 'Spanish Latte Frappe',
     imgPath: 'bestseller3.jpg',
+    price: 130,
   },
 ];
 

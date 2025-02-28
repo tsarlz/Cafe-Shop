@@ -1,23 +1,29 @@
-<section id="hero" class="bg-[#F9E2BA] md:block hidden">
+<section id="hero" class="bg-[#F9E2BA]">
   <div
-    class="flex justify-between items-center max-w-[1000px] m-auto min-h-[95vh]"
+    class="flex md:flex-row flex-col justify-between items-center max-w-[350px] md:max-w-[700px] lg:max-w-[1000px] mx-auto min-h-[40vh] lg:min-h-[95vh]"
   >
-    <div class="space-y-8 mt-16">
-      <div class="mt-5">
-        <h1 class="text-7xl font-bold text-[#33150e]">
+    <div class="sm:space-y-8 space-y-4 mt-16">
+      <div class="lg:mt-5 md:mt-10 mt-11">
+        <h1 class="lg:text-7xl md:text-5xl text-2xl font-bold text-[#33150e]">
           {{ heroText }}
         </h1>
-        <h3 class="text-xl font-semibold text-[#33150e] mt-6">
+        <h3
+          class="lg:text-xl md:text-lg text-xs font-normal text-[#33150e] lg:mt-6 md:mt-4 mt-2 sm:whitespace-nowrap"
+        >
           {{ heroSubText }}
         </h3>
       </div>
       <button
         routerLink="/menu"
-        class="hover:bg-[#8a5939] transition-transform hover:text-[#FFF7E6] px-4 py-2 rounded-full font-semibold border-2 border-amber-900"
+        class="hover:bg-[#8a5939] transition-transform hover:text-[#FFF7E6] px-4 py-2 rounded-full font-semibold border-2 border-amber-900 lg:text-[1rem] md:text-sm text-xs"
       >
         Get Satisfied
       </button>
     </div>
-    <img class="w-80" [src]="heroImg" alt="Hero Section Image" />
+    <img
+      class="lg:w-80 md:w-44 lg:mt-5 md:mt-10 mt-16 sm:block hidden"
+      [src]="heroImg"
+      alt="Hero Section Image"
+    />
   </div>
 </section>

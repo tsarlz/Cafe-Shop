@@ -2,14 +2,13 @@
 
 <section class="bg-[#f9eedb] sticky top-0 z-10">
   <div
-    class="flex justify-start items-center w-auto md:w-[75rem] sm:mx-auto mx-5 h-[6rem]"
+    class="flex justify-start items-center lg:w-[75rem] lg:mx-auto mx-5 h-[6rem]"
   >
-    <div class="w-[50%] md:w-[20%]">
+    <div class="w-[50%] md:w-[30%] lg:w-[20%]">
       <h2 (click)="initializeMenu()" class="text-2xl font-bold">Menu</h2>
     </div>
-    <!-- ////// -->
     <div
-      class="flex justify-start items-center border border-black rounded-xl w-full md:w-[30%]"
+      class="flex justify-start items-center border border-black rounded-xl w-full md:w-[40%] lg:w-[30%]"
     >
       <input
         [(ngModel)]="searchInput"
@@ -24,92 +23,87 @@
         <mat-icon> search</mat-icon>
       </div>
     </div>
-    <!-- ///// -->
   </div>
 </section>
 
 <section
-  class="md:w-[75rem] w-full mx-auto md:mt-10 mt-0 flex md:flex-row flex-col items-start md:space-x-20"
+  class="max-w-[75rem] w-full mx-auto lg:mt-10 mt-0 flex lg:flex-row flex-col items-start lg:space-x-20"
   id="menu-list"
 >
   <!-- menu-sidebar -->
   <div
     id="sideBar"
-    class="sticky top-[6rem] md:w-1/6 w-full md:bg-transparent bg-gray-50 z-[1000000] md:py-0 py-4"
+    class="sticky top-[6rem] lg:w-1/6 w-full lg:bg-transparent bg-gray-50 z-[1000000] lg:py-0 py-4"
   >
     <div
-      class="flex items-center md:items-start md:flex-col flex-row md:space-y-10 md:p-0 pr-4 md:space-x-0 md:mt-5 w-full overflow-x-auto scrollbar-hide"
+      class="flex items-center lg:items-start lg:flex-col flex-row lg:space-y-10 lg:p-0 pr-4 lg:space-x-0 lg:mt-5 w-full overflow-x-auto scrollbar-hide"
     >
-      <!-- menu1 -->
       <div>
-        <h3 class="font-bold text-xl md:block hidden">Drinks</h3>
+        <h3 class="font-bold text-xl lg:block hidden">Drinks</h3>
         <ul
-          class="flex items-center md:block md:space-y-2 md:space-x-0 md:mt-3 whitespace-nowrap text-sm md:text-[1rem]"
+          class="flex items-center lg:block lg:space-y-2 lg:space-x-0 lg:mt-3 whitespace-nowrap text-sm lg:text-[1rem]"
         >
           <li
             (click)="filterMenu('Coffee')"
-            class="cursor-pointer md:p-0 pl-8 pr-4 border-r-2 md:border-r-0 border-[#e5e5e5]"
+            class="cursor-pointer lg:p-0 pl-8 pr-4 border-r-2 lg:border-r-0 border-[#e5e5e5]"
           >
             Coffee
           </li>
           <li
             (click)="filterMenu('Milktea')"
-            class="cursor-pointer md:p-0 px-4 border-r-2 md:border-r-0 border-[#e5e5e5]"
+            class="cursor-pointer lg:p-0 px-4 border-r-2 lg:border-r-0 border-[#e5e5e5]"
           >
             MilkTea
           </li>
           <li
             (click)="filterMenu('Sodas')"
-            class="cursor-pointer md:p-0 px-4 border-r-2 md:border-r-0 border-[#e5e5e5]"
+            class="cursor-pointer lg:p-0 px-4 border-r-2 lg:border-r-0 border-[#e5e5e5]"
           >
             Soda
           </li>
           <li
             (click)="filterMenu('Loose Tea')"
-            class="cursor-pointer md:p-0 px-4 border-r-2 md:border-r-0 border-[#e5e5e5]"
+            class="cursor-pointer lg:p-0 px-4 border-r-2 lg:border-r-0 border-[#e5e5e5]"
           >
             Loose Tea
           </li>
           <li
             (click)="filterMenu('Non-coffee Drinks')"
-            class="cursor-pointer flex-1 md:p-0 px-4 border-r-2 md:border-r-0 border-[#e5e5e5]"
+            class="cursor-pointer flex-1 lg:p-0 px-4 border-r-2 lg:border-r-0 border-[#e5e5e5]"
           >
             Non-coffee Drinks
           </li>
         </ul>
       </div>
-      <!-- menu1 -->
-      <!-- ///// -->
-      <!-- menu2 -->
+
       <div>
-        <h3 class="font-bold text-xl md:block hidden">Foods</h3>
+        <h3 class="font-bold text-xl lg:block hidden">Foods</h3>
         <ul
-          class="flex items-center md:block md:space-y-2 md:space-x-0 md:mt-3 w-[100%] whitespace-nowrap"
+          class="flex items-center lg:block lg:space-y-2 lg:space-x-0 lg:mt-3 w-[100%] whitespace-nowrap"
         >
           <li
             (click)="filterMenu('Rice Meal')"
-            class="cursor-pointer md:p-0 px-4 border-r-2 md:border-r-0 border-[#e5e5e5]"
+            class="cursor-pointer lg:p-0 px-4 border-r-2 lg:border-r-0 border-[#e5e5e5]"
           >
             Rice Meal
           </li>
           <li
             (click)="filterMenu('Silog Meal')"
-            class="cursor-pointer md:p-0 pl-4"
+            class="cursor-pointer lg:p-0 pl-4"
           >
             Silog Meal
           </li>
         </ul>
       </div>
-      <!-- menu2 -->
     </div>
   </div>
   <!-- menu-sidebar -->
 
   <!-- display menu -->
-  <div id="searchMenu" class="md:w-full space-y-20 mt-5 md:mt-0 mx-8 md:mx-0">
+  <div id="searchMenu" class="lg:w-full space-y-20 mt-5 lg:mt-0 mx-8 lg:mx-0">
     <div *ngIf="hasCategory('Drinks')" id="allDrinks">
       <!-- Drinks Heading -->
-      <div class="mx-5 md:mx-0">
+      <div class="mx-5 lg:mx-0">
         <h3 *ngIf="variety">
           <span (click)="initializeMenu()" class="font-bold cursor-pointer"
             >Menu</span
@@ -121,27 +115,32 @@
         </div>
       </div>
       <!-- Menu -->
-      <ul class="grid md:grid-cols-3 grid-cols-1 gap-5 w-full justify-center">
+      <ul
+        class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-5 gap-5 w-full justify-center"
+      >
         <ng-container *ngFor="let item of filteredItems">
           <li
             *ngIf="item.category === 'Drinks'"
-            class="flex md:flex-col md:justify-self-start items-center md:space-y-5 md:space-x-0 space-x-6"
+            class="flex lg:flex-col lg:justify-self-start items-start lg:space-y-5 lg:space-x-0 space-x-6"
           >
             <div class="menuImg-wrapper">
               <img
-                class="menuImg md:size-[12rem] size-[10rem] transition-transform hover:-translate-y-2"
+                class="menuImg lg:size-[12rem] size-[10rem] transition-transform hover:-translate-y-2"
                 [src]="item.imgPath"
                 alt="Menu Item"
               />
             </div>
-
-            <h4 class="font-semibold md:text-xl text-lg">{{ item.name }}</h4>
+            <div>
+              <h4 class="font-semibold lg:text-xl text-lg">{{ item.name }}</h4>
+              <h5 class="font-normal lg:text-lg text-md">P{{ item.price }}</h5>
+            </div>
           </li>
         </ng-container>
       </ul>
     </div>
+    <!-- Foods Heading -->
     <div *ngIf="hasCategory('Foods')" id="allFoods">
-      <div class="mx-5 md:mx-0">
+      <div class="mx-5 lg:mx-0">
         <h3 *ngIf="variety">
           <span (click)="initializeMenu()" class="font-bold cursor-pointer"
             >Menu</span
@@ -152,16 +151,16 @@
         </div>
       </div>
       <ul
-        class="grid md:grid-cols-3 grid-cols-1 gap-5 w-full justify-center md:mx-0"
+        class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-2 gap-5 w-full justify-center"
       >
         <ng-container *ngFor="let item of filteredItems">
           <li
             *ngIf="item.category === 'Foods'"
-            class="flex md:flex-col md:justify-self-start items-center md:space-y-5 md:space-x-0 space-x-6"
+            class="flex lg:flex-col lg:justify-self-start items-center lg:space-y-5 lg:space-x-0 space-x-6"
           >
             <div class="menuImg-wrapper">
               <img
-                class="menuImg md:size-[12rem] size-[10rem] transition-transform hover:-translate-y-2"
+                class="menuImg lg:size-[12rem] size-[10rem] transition-transform hover:-translate-y-2"
                 [src]="item.imgPath"
                 alt="Menu Item"
               />
