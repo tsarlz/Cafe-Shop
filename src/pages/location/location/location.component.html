@@ -1,1 +1,50 @@
-<p>location works!</p>
+<section
+  class="max-w-[75rem] h-[89.4vh] mx-auto flex justify-center items-center"
+>
+  <div
+    class="h-full w-full flex lg:flex-row flex-col justify-center items-center lg:space-x-5"
+  >
+    <img
+      class="lg:w-1/2 w-full lg:h-auto h-[45vh] lg:pt-24 pt-12"
+      [src]="storeImg"
+      alt="Langga Cafe store photo"
+    />
+
+    <!-- Map and Contact -->
+    <div class="lg:w-1/2 md:w-full h-full">
+      <div class="h-full w-full lg:pt-32 lg:pb-20 lg:px-0 px-10">
+        <!-- Address -->
+        <div
+          class="w-full lg:h-1/2 h-1/4 flex flex-col lg:justify-start md:justify-center justify-between lg:pt-6 lg:py-0 py-3"
+        >
+          <h4 class="text-xl font-semibold text-[#33150e] lg:mb-5">
+            Infornt of RHU center
+          </h4>
+          <p>P-3 Brgy, Magallanes, 8604 Agusan Del Norte</p>
+        </div>
+        <!-- Map and Hours -->
+        <div
+          class="lg:h-1/2 h-[60%] w-full flex justify-center items-center lg:space-x-3 lg:space-x-0 space-x-3"
+        >
+          <!-- map -->
+          <div class="w-1/2 h-full flex justify-center items-center">
+            <div class="h-full w-full" id="map"></div>
+          </div>
+          <div
+            class="w-1/2 h-full flex flex-col justify-start items-center space-y-5"
+          >
+            <h4
+              class="border-y-2 border-dashed w-full text-center py-2 text-lg font-semibold text-[#33150e]"
+            >
+              Open Hours
+            </h4>
+            <div class="w-full flex justify-between items-center">
+              <p>Mon - Sun</p>
+              <p>11:30am to 9pm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
